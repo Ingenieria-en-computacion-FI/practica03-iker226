@@ -1,42 +1,23 @@
 #include <stdio.h>
 #include "pelicula.h"
 
-int main()
-{
-
+int main(){
     printf("Prueba del TAD Pelicula\n");
 
-    /* TODO
-       Crear una película
-    */
-    Pelicula* p = NULL;
+    Pelicula* p=NULL;
+    p= crearPelicula("Inception", 2010, "Ciencia Ficcion");
 
+    agregarDirector(p, "Cristopher Nolan");
 
-    /* TODO
-       Agregar algunos directores
-    */
-
-
-    /* TODO
-       Imprimir película
-    */
-
+    imprimir(p);
 
     printf("\nCambiar genero\n");
 
-    /* TODO
-       Cambiar genero
-    */
+    cambiarGenero(p, "Accion");
 
+    imprimir(p);
 
-    /* TODO
-       Imprimir nuevamente
-    */
-
-
-    /* TODO
-       Liberar memoria
-    */
+    destruir (p);
 
     return 0;
 }
